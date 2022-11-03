@@ -38,17 +38,17 @@ const ManualPayment = () => {
 
   return (
     <div className="flex flex-col">
-      <ErrorMessage
+      {/* <ErrorMessage
         error={
           "This is for testing purposes only, and should not be used in a production environment."
         }
-      />
+      /> */}
       <button
         className="btn-ui my-4"
         onClick={handleTestPayment}
         disabled={processing}
       >
-        {processing ? "Processing..." : "Test Payment"}
+        {processing ? "Processing..." : "Payment"} {/* Test  */}
       </button>
     </div>
   )
