@@ -17,10 +17,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <div className="bg-ui-light">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
+      <div className="bg-ui-light h-full" />
     </div>
   )
 }

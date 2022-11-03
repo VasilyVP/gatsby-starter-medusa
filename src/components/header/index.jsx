@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import Logo from "../../icons/logo.svg"
+import Logo from "./logo"
+import Navigation from './navigation'
 import AccountPopover from "./account-popover"
 import Banner from "./banner"
 import CartPopover from "./cart-popover"
@@ -86,10 +87,13 @@ const Header = () => {
   const [open, setOpen] = useState(false)
   return (
     <div className="sticky top-0 z-20">
-      <header className="relative bg-white">
+      <header className="relative bg-ui-light">
         <Banner />
-        <MobileMenu open={open} setOpen={setOpen} />
-        <nav
+        {/* <MobileMenu open={open} setOpen={setOpen} /> */}
+        <Logo />
+        <Navigation />
+        <hr className='mt-2 border-solid border-1 border-[#d4d4d4]' />
+        {/* <nav
           aria-label="Top"
           className="px-4 sm:px-6 lg:px-8 border-b border-ui-medium flex items-center justify-between"
         >
@@ -132,7 +136,7 @@ const Header = () => {
             </div>
             <CartPopover cart={mockData.cart} />
           </div>
-        </nav>
+        </nav> */}
       </header>
     </div>
   )
